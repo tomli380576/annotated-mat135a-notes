@@ -36,7 +36,6 @@ $$
 Now we can compute the expectation:
 
 $$
-
 \begin{aligned}
 E[Y] &= E[e^X]\\
 &= \int^\infty_{-\infty} xf_Y(x)dx\\
@@ -44,4 +43,5 @@ E[Y] &= E[e^X]\\
 &= e-1
 
 \end{aligned}
+
 $$
