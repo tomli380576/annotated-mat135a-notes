@@ -43,5 +43,4 @@ E[Y] &= E[e^X]\\
 &= e-1
 
 \end{aligned}
-
 $$
