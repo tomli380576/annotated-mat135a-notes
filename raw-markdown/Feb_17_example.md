@@ -6,7 +6,7 @@ Let $X$ be a random variable with a cumulative density function $F_X$ where $F_X
 
 Let $Y = F_X(x)$ , then $Y$ has a uniform distribution over $[0,1]$
 
-##### <u>*Proof.*</u>
+##### *Proof.*
 
 The cumulative density of $Y$ is:
 
