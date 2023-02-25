@@ -4,7 +4,7 @@
 
 Let $X$ be a continuous random variable and interpret $x$ as the ***lifetime*** of some item.
 
-Let $f(x)$ be the probability density function of $x$ and let $F(x) = \int f$ be the cumulative density function. We can define:
+Let $f(x)$ be the probability density function of $x$ and let $F_X(x) = \int f$ be the cumulative density function. We can define:
 
 ## <span style="color: #ff6188">Def.</span> Hazard Rate / Failure Rate
 
@@ -63,21 +63,21 @@ Integrate $\lambda(t)$:
 
 $$
 \begin{aligned}
-    \int^t_0\lambda(s) \text ds &= \int^t_0\frac{f(s)}{1-F(s)}\text ds\\
-    & \small \text{use u-sub with } u = 1-F(s)\\
-    &= -\ln(1-F(s))\;\Big|^t_0\\
-    &= -\ln(1-F(t)) + \ln(1 - \underbrace{F(0)}_{0, \because \int^0_0 f = 0})\\
-    &= -\ln(1- F(t)) + \ln(1)\\
-    &=  -\ln(1- F(t))
+    \int^t_0\lambda(s) \text ds &= \int^t_0\frac{f(s)}{1-F_X(s)}\text ds\\
+    & \small \text{use u-sub with } u = 1-F_X(s)\\
+    &= -\ln(1-F_X(s))\;\Big|^t_0\\
+    &= -\ln(1-F_X(t)) + \ln(1 - \underbrace{F_X(0)}_{0, \text{ since}\int^0_0 f = 0})\\
+    &= -\ln(1- F_X(t)) + \ln(1)\\
+    &=  -\ln(1- F_X(t))
 \end{aligned}
 $$
 
-Isolate $F(t)$:
+Isolate $F_X(t)$:
 
 $$
 \begin{aligned}
-    \int^t_0\lambda(s) \text ds &= -\ln(1- F(t))\\
-    \implies F(t)&=\boxed{ 1-\exp\left(-\int^t_0\lambda (s) \text ds\right)}
+    \int^t_0\lambda(s) \text ds &= -\ln(1- F_X(t))\\
+    \implies F_X(t)&=\boxed{ 1-\exp\left(-\int^t_0\lambda (s) \text ds\right)}
 \end{aligned}
 $$
 
@@ -138,7 +138,6 @@ $$
 Similarly for smokers:
 
 $$
-
 \begin{aligned}
 
 &\hspace{1em}P(\text{Lifetime of $S$ is$>B$}\mid \text{Already $A$ years old})\\
